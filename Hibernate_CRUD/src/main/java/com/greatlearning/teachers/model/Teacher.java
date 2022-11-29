@@ -2,10 +2,32 @@ package com.greatlearning.teachers.model;
 
 import java.util.Objects;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+//Javax Annotations
+//Utilizes Java Persistence API (JPA)
+//New way of ORM --> Mapping a Java class to Database table
+
+@Entity
+@Table(name="teachers")
 public class Teacher {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
+	
+	@Column(name="name", nullable=false)
 	private String name;
+	
+	@Column(name="subject", nullable=false)
 	private String subject;
+	
+	@Column(name="exp", nullable=false)
 	private int exp;
 	
 	//Mandatory for entity

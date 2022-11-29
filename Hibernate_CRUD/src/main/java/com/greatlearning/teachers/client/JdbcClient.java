@@ -6,7 +6,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class JdbcClient_WithoutHibernate {
+//Without Hibernate
+//Directly using JDBC to connect to Database
+
+public class JdbcClient {
 	
 	/* STEPS TO RUN STATEMENTS	*/	
 	public static void main(String[] args) {
